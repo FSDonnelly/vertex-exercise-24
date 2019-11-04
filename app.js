@@ -21,7 +21,7 @@ app.post(`/products`, (req, res) => {
 });
 
 app.put(`/products/:id`, (req, res) => {
-  let productId = req.params.id;
+  let productId = +req.params.id;
   let productForUpdate;
   for (let i = 0; i < products.length; i++) {
     let element = products[i];
@@ -39,7 +39,7 @@ app.put(`/products/:id`, (req, res) => {
 });
 
 app.delete(`/products/:id`, (req, res) => {
-  let productId = req.params.id;
+  let productId = +req.params.id;
   for (let i = 0; i < products.length; i++) {
     let element = products[i];
     if (element.id === productId) {
