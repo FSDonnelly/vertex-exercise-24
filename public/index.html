@@ -18,6 +18,47 @@
     />
   </head>
   <body>
+    <div class="container">
+      <h1>Shop</h1>
+      <h2>Show all products</h2>
+      <button class="show-products btn-primary">Show</button>
+
+      <h2>Add product</h2>
+      <form class="add-product-form">
+        <p>
+          <label for="add-product-name">Product: </label
+          ><input id="add-product-name" type="text" />
+        </p>
+        <p>
+          <label for="add-product-price">Price: </label
+          ><input id="add-product-price" type="text" />
+        </p>
+        <button class="btn-secondary">Add</button>
+      </form>
+
+      <h2>Update price</h2>
+      <form class="update-product-form">
+        <p>
+          <label for="update-product-id">Product ID: </label
+          ><input id="update-product-id" type="number" />
+        </p>
+        <p>
+          <label for="update-product-price">Price: </label
+          ><input id="update-product-price" type="text" />
+        </p>
+        <button class="btn-secondary">Update</button>
+      </form>
+
+      <h2>Delete product</h2>
+      <form class="delete-product-form">
+        <p>
+          <label for="delete-product-id">Product ID: </label
+          ><input id="delete-product-id" type="number" />
+        </p>
+        <button class="btn-secondary">Delete</button>
+      </form>
+    </div>
+
     <!-- Optional JavaScript -->
     <script src="js/script.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
