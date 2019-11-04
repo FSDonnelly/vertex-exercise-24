@@ -2,6 +2,7 @@ let showBtn = document.querySelector('.show-products');
 let list = document.querySelector(`.product-list`);
 let addForm = document.querySelector(`.add-product-form`);
 let updateForm = document.querySelector(`.update-product-form`);
+let deleteForm = document.querySelector(`.delete-product-form`);
 
 showBtn.addEventListener('click', () => {
   list.innerHTML = '';
@@ -43,6 +44,16 @@ updateForm.addEventListener('submit', e => {
     body: JSON.stringify({
       price: document.getElementById(`update-product-price`).value
     })
+  })
+    .then(res => res.text())
+    .then(data => console.log(data));
+});
+
+deleteForm.addEventListener('submit', e => {
+  e.preventDefault();
+  let id = document.getElementById('delete-product-id').value;
+  fetch(`http://localhost:3000/products/${id}`, {
+    method: 'DELETE'
   })
     .then(res => res.text())
     .then(data => console.log(data));
